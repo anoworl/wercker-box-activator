@@ -24,4 +24,4 @@ script: |
   rmdir activator-${VER}-minimal
 
   # fetch activator-launcher
-  activator
+  activator || echo "done" # FIXME: this is workaround because `activator` command fail always
