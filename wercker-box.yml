@@ -1,0 +1,27 @@
+name: activator
+version: 0.0.1
+description: wercker box for typesafe-activator with java 1.7
+type: main
+platform: ubuntu@12.04
+keywords:
+  - scala
+  - activator
+packages:
+  - activator@1.2.10
+  - java@1.7
+script: |
+  # variables
+  export VER=1.2.10
+
+  # install dependencies
+  sudo apt-get update
+  sudo apt-get install -y unzip wget openjdk-7-jdk
+
+  # install activator
+  wget http://downloads.typesafe.com/typesafe-activator/${VER}/typesafe-activator-${VER}-minimal.zip
+  unzip typesafe-activator-${VER}-minimal.zip
+  sudo mv activator-${VER}-minimal/* /usr/local/bin
+  rmdir activator-${VER}-minimal
+
+  # fetch activator-launcher
+  activator
