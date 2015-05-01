@@ -1,5 +1,5 @@
 name: activator
-version: 0.0.3
+version: 0.0.4
 inherits: wercker/ruby@1.0.0
 description: wercker box for typesafe-activator with java 1.6
 type: main
