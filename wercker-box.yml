@@ -1,6 +1,6 @@
 name: activator
-version: 0.0.4
-inherits: wercker/ruby@1.0.0
+version: 0.0.5
+inherits: wercker/rvm@3.0.0
 description: wercker box for typesafe-activator with java 1.6
 type: main
 platform: ubuntu@12.04
@@ -11,7 +11,7 @@ keywords:
 packages:
   - activator@1.3.2
   - java@1.6
-  - ruby@2.0.0
+  - ruby@2.2.2
   - sass@3.4.13
 script: |
   # variables
